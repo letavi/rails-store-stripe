@@ -7,5 +7,21 @@
     <div class="sticker">
       <%= image_tag("sticker.png", alt: "Sticker") %>
     </div>
+
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+      </article>
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Pack of 5 stickers"
+          data-amount="500"
+          data-locale="auto"></script>
+    <% end %>
   </div>
 </div>
