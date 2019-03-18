@@ -1,2 +1,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.sticker {
+  border: 1px solid #333;
+  width: 505px;
+  padding: 5px;
+  img {
+    border: 1px solid #ccc;
+    width: 493px;
+  }
+}
