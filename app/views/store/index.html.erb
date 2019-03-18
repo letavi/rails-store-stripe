@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Stickers</h1>
+  <h1><%= link_to "Stickers", root_path %></h1>
 
   <div class="product">
     <h2>Pack of 5 stickers for $5</h2>
@@ -20,6 +20,7 @@
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Pack of 5 stickers"
+          data-label="Buy Now"
           data-amount="500"
           data-locale="auto"></script>
     <% end %>
